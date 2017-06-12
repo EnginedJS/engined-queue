@@ -30,7 +30,7 @@ const main = async () => {
 
 	// Adding agent to manager
 	serviceManager.add('AMQP', AMQPService);
-	serviceManager.add('Queue', QueueService);
+	serviceManager.add('Queue', QueueService({ uri: 'amqp://localhost/myvhost' }));
 
 	// Start all services
 	await serviceManager.startAll();
