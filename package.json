@@ -1,0 +1,30 @@
+{
+  "name": "engined-queue",
+  "version": "0.0.1",
+  "description": "queue agent service for engined",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfsghost/engined-queue.git"
+  },
+  "keywords": [
+    "service",
+    "engined",
+    "queue"
+  ],
+  "engines": {
+    "node": ">=7.4"
+  },
+  "author": "Fred Chien <cfsghost@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cfsghost/engined-queue/issues"
+  },
+  "homepage": "https://github.com/cfsghost/engined-queue#readme",
+  "dependencies": {
+    "engined": "0.0.2"
+  }
+}
