@@ -30,7 +30,7 @@ const main = async () => {
 
 	// Adding agent to manager
 	serviceManager.add('AMQP', AMQPService);
-	serviceManager.add('Queue', QueueService);
+	serviceManager.add('Queue', QueueService({ uri: 'amqp://localhost/myvhost' }));
 
 	// Start all services
 	await serviceManager.startAll();
@@ -41,17 +41,16 @@ main();
 
 ## Implement Consumer
 
-For consuming messages, inherit `Consumer` class to implement service.
-
+For consuming messages, inherit `Consumer` class to implement a service and implement `consume` method.
 
 ```javascript
 const { Consumer } = require('engined-queue');
 
 const PrototypeConsumer = Consumer({
-     exchangeName: 'myexcahnge',
-	 exchangeType: 'topic', // optional: default to topic if not set.
-     targetQueue: 'myqueue',
-     routingRules: 'black.*'
+	exchangeName: 'myexcahnge',
+	exchangeType: 'topic', // optional: default to topic if not set.
+	targetQueue: 'myqueue',
+	routingRules: 'black.*'
 });
 
 const MyConsumer = class extends PrototypeConsumer {
