@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/EnginedJS/engined-queue#readme",
   "dependencies": {
-    "engined": "0.0.2"
+    "engined": "^0.0.4"
   }
 }
