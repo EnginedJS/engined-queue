@@ -1,6 +1,6 @@
 {
   "name": "engined-queue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "queue agent service for engined",
   "main": "index.js",
   "scripts": {
